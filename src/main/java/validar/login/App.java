@@ -6,8 +6,9 @@ public final class App {
     }
     public static void main(String[] args) {
         Validar validar = new Validar();
-        System.out.println("Validação de senha!!!!");
+        System.out.println("Validação de usuário!!!!");
 
+        System.out.println("Nome:");
     }
 
 }

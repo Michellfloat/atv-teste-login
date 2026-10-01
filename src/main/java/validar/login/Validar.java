@@ -34,7 +34,7 @@ public class Validar {
             throw new NotFoundException("Email não encontrado!!");
         }
 
-        boolean emailCorreto = email.toLowerCase().endsWith("@gmail.com");
+        boolean emailCorreto = email.matches(".*[@]*.");
 
         boolean emailVerdadeiro = emailCorreto;
 

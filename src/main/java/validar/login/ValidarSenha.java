@@ -2,7 +2,7 @@ package validar.login;
 
 import validar.login.exception.NotFoundException;
 
-public class Validar {
+public class ValidarSenha {
     public boolean validarSenha(String senha) {
         if (senha == null || senha.isBlank()) {
             return false;
@@ -20,14 +20,6 @@ public class Validar {
                 possuiLetra &&
                 possuiEspecial;
     }
-
-   public boolean validarNome(String nome){
-        if (nome == null || nome.isBlank()){
-           throw new NotFoundException("Nome não encontrado!!");
-       }
-        boolean nomeValido = Boolean.valueOf(nome);
-        return nomeValido;
-   }
 
     public boolean validarEmail(String email){
         if (email == null || email.isBlank()){

@@ -8,7 +8,9 @@ public final class App {
         Validar validar = new Validar();
         System.out.println("Validação de usuário!!!!");
 
-        System.out.println("Nome:");
+        System.out.println("Nome: " + validar.validarNome("Carlos"));
+        System.out.println("Email: " + validar.validarNome("Carlos@gmail.com"));
+
     }
 
 }

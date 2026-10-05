@@ -45,10 +45,23 @@
 | Requisito | Descrição |
 |-----------|-----------|
 | **RF01 / RF08** | Permitir o cadastro de novos usuários com um nível de acesso válido (`ADMIN`, `GERENTE` ou `CLIENTE`). |
+|**RF02**/**RF03**|A senha deve possuir apenas **10 a 12 caracteres**, contendo pelo menos:**1 letra**, **1 número** e **1 caractere especial**|
 | **RF04 / RF06** | Autenticar com login ou senha vazios deve lançar `ValidacaoException`. |
+|**RF05**|Caso não exista usuário cadastrado, lança `NotFoundException`, caso exista mas não insira senha correta lança `AutenticacaoException`|
 | **RF06** | Autenticar um usuário que não existe deve lançar `NotFoundException`. |
 | **RF07** | Após **3 tentativas consecutivas incorretas**, a conta é bloqueada. Qualquer tentativa seguinte lança `ContaBloqueadaException`. |
- 
+
+### Requisitos Não Funcionais (RNFs):
+**RNF01**: Utilizar Java, Maven, JUnit 5 e IntelliJ IDEA.
+
+**RNF02**: Os testes unitários devem ser implementados com JUnit 5.
+
+**RNF03**: Os testes devem ser independentes entre si sempre que possível.
+
+**RNF04**: Cada teste deve possuir identificação clara do comportamento validado.
+
+**RNF05**:O aluno deverá apresentar evidências da execução dos testes.
+
 ---
  
 ## 2. Testes e Validações de Cada Questão
@@ -72,7 +85,6 @@
 | RF04 / RF06 | `testeAutenticacaoCamposVazios()` | Lançar `ValidacaoException` com campos vazios | `assertThrows` | ✅ PASSOU |
 | RF06 | `testeUsuarioInexistente()` | Lançar `NotFoundException` | `assertThrows` | ✅ PASSOU |
 | RF07 | `testeBloqueioContaApos3Tentativas()` | `AutenticacaoException` nas 3 falhas e `ContaBloqueadaException` na 4ª tentativa | `assertThrows` | ✅ PASSOU |
- 
 ---
  
 ## 3. Como o Script Foi Feito

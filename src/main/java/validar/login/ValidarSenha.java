@@ -21,17 +21,7 @@ public class ValidarSenha {
                 possuiEspecial;
     }
 
-    public boolean validarEmail(String email){
-        if (email == null || email.isBlank()){
-            throw new NotFoundException("Email não encontrado!!");
-        }
 
-        boolean emailCorreto = email.matches(".*[@]*.");
-
-        boolean emailVerdadeiro = emailCorreto;
-
-        return emailVerdadeiro;
-    }
 
 
 }

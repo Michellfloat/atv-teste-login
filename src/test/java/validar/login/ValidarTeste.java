@@ -5,16 +5,16 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class ValidarTeste {
-    private Validar validacao = new Validar();
+    private ValidarSenha validacao = new ValidarSenha();
 
-    boolean validarNome = new Validar().validarNome("Carlos");
-    boolean validarEmail = new Validar().validarEmail("Carlos@gmail.com");
-    
+    boolean validarNome = new ValidarSenha().validarNome("Carlos");
+    boolean validarEmail = new ValidarSenha().validarEmail("Carlos@gmail.com");
+    boolean validarSenha = new ValidarSenha().validarSenha("Javax@123456");
 
 
     @BeforeEach
     void setUp(){
-        validacao = new Validar();
+        validacao = new ValidarSenha();
     }
 
     @Test
@@ -24,9 +24,9 @@ public class ValidarTeste {
     }
 
     @Test
-    void quantidadeCaracteres(){
+    void testeValida10Caracteres(){
         //A quantidade deve ser entre 10 e 12
-        String senha = "Flo4tingM5t@l";
+        String senha = "Flo4tingM5t@";
 
         boolean resultado = validacao.validarSenha(senha);
         Assertions.assertTrue(resultado);

@@ -549,11 +549,11 @@ void  testeSenhaLimiteMaximo12(){
 }
 ```
  
-![Código do teste 3.5](docs/img/13_5-teste-validar-teste3_5-senha-limite-maximo12.png)
+![Código do teste 3.5](docs/img/13.5-teste-validar-teste3.5-senha-limite-maximo12.png)
  
 **Resultado:**
  
-![Resultado do teste 3.5](docs/img/13_5-teste-resultado.png)
+![Resultado do teste 3.5](docs/img/13.5-teste-resultado.png)
  
 #### ❓ Teste 3 · CT03: uma senha com mais de 12 caracteres é rejeitada?
  

@@ -5,6 +5,8 @@
 | Campo | Informação |
 |-------|------------|
 | **Nome do aluno** | _(Michell Silva Santos)_ |
+| **Turma**|| _(96231)_|
+| **Turno**|| _(Noturno)_|
 | **Curso** | _(Análise e Desenvolvimento de Sistemas)_ |
 | **Professor(a)** | _(Washington Luis Souza de Anunciação)_ |
 | **Data** | _(06/10/2026)_ |

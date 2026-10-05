@@ -9,6 +9,7 @@ public class ValidarTeste {
 
     boolean validarNome = new Validar().validarNome("Carlos");
     boolean validarEmail = new Validar().validarEmail("Carlos@gmail.com");
+    
 
 
     @BeforeEach

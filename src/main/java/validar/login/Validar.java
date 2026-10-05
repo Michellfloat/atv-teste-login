@@ -1,8 +1,9 @@
 package validar.login;
 
-import validar.login.exception.NotFoundException;
+import validar.login.exception.ValidationException;
 
 public class Validar {
+
     public boolean validarSenha(String senha) {
         if (senha == null || senha.isBlank()) {
             return false;
@@ -23,22 +24,35 @@ public class Validar {
 
    public boolean validarNome(String nome){
         if (nome == null || nome.isBlank()){
-           throw new NotFoundException("Nome não encontrado!!");
+           throw new ValidationException("Nome não encontrado!!\nTente novamente.");
        }
-        boolean nomeValido = Boolean.valueOf(nome);
-        return nomeValido;
+        return true;
    }
 
     public boolean validarEmail(String email){
         if (email == null || email.isBlank()){
-            throw new NotFoundException("Email não encontrado!!");
+            throw new ValidationException("Email não pode ser nulo ou vazio.\nTente novamente.");
+        }
+        //É melhor inserir o regex dentro de uma variável e apenas chamá-la
+        String regexEmail = "[A-Za-z0-9+_.-]+@[a-Za-z0-9.-]\\.[a-zA-Z]{2,}$";
+
+        if (!email.matches(regexEmail)) {
+            return false;
+        }
+        return true;
+    }
+
+    public boolean validarLogin(String nome, String senha){
+        
+        boolean senhaValida = validarSenha(senha);
+        boolean nomeValido = validarNome(nome);
+
+        
+        if (nomeValido == true && senhaValida == true) {
+            return true;
         }
 
-        boolean emailCorreto = email.matches(".*[@]*.");
-
-        boolean emailVerdadeiro = emailCorreto;
-
-        return emailVerdadeiro;
+        return true;
     }
 
 

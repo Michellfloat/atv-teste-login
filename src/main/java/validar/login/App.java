@@ -9,7 +9,8 @@ public final class App {
         System.out.println("Validação de usuário!!!!");
 
         System.out.println("Nome: " + validar.validarNome("Carlos"));
-        System.out.println("Email: " + validar.validarNome("Carlos@gmail.com"));
+        System.out.println("Email: " + validar.validarEmail("Carlos@gmail.com"));
+        System.out.println("Senha: " + validar.validarSenha("Java@12345"));
 
     }
 

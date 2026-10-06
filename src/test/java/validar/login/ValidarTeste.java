@@ -24,11 +24,15 @@ public class ValidarTeste {
         validadorSenha = new  ValidarSenha();
 
         validadorLogin = new ValidarLogin();
+
+        System.out.println("Testes Unitários de Caixa Branca!!!");
     }
 
     @Test
     void testeValidaMinimo10Caracteres(){
-        //A quantidade deve ser entre 10 e 12
+        //A quantidade de caracteres da senha deve ser entre 10 e 12, senhas abaixo de 10 e acima de 12 não são aceitas
+
+        //A senha só pode possuir no MÍNIMO 10 caracteres
         String senha = "Flo4tingM5t@";
 
         boolean resultado = validadorSenha.validarSenha(senha);
@@ -75,6 +79,7 @@ public class ValidarTeste {
 
     @Test
     void senhaNaoNula(){
+        
         //autenticação de Senha não pode ser nula, caso nulo deve ser Falso
         String senha = "";
 
@@ -84,6 +89,7 @@ public class ValidarTeste {
 
     @Test
     void usuarioNaoNulo(){
+        
         //autenticação do nome do usuário não pode ser nula, caso nulo deve ser Falso
         String usuario = "";
 
@@ -92,6 +98,7 @@ public class ValidarTeste {
 
     @Test 
     void SenhaNaoVazia(){
+        
         //autenticação de Senha não pode ser vazia, caso vazia ela deve ser falso
         String senha = " ";
         
@@ -105,6 +112,7 @@ public class ValidarTeste {
 
     @Test
     void usuarioNaoVazio(){
+        
         //autenticação do nome do usuário não pode ser nula, caso nulo deve ser Falso
         String usuario = "";
 
@@ -130,6 +138,7 @@ public class ValidarTeste {
 
     @Test 
     void bloqueio3Tentativas(){
+        //O usuário pode tentar acesso até 3 vezes, caso chegue ou ultrapasse o limite uma "BlockAcccount" é lançada
         String usuario = "Banyue";
         String senha = "Java@1234567";
 

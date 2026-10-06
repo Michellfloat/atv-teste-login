@@ -5,12 +5,14 @@ public final class App {
     private App() {
     }
     public static void main(String[] args) {
-        ValidarSenha validar = new ValidarSenha();
+        ValidarSenha validarSenha = new ValidarSenha();
+        ValidarNome validarNome = new ValidarNome();
+        ValidarEmail validarEmail = new ValidarEmail();
         System.out.println("Validação de usuário!!!!");
 
-        System.out.println("Nome: " + validar.validarNome("Carlos"));
-        System.out.println("Email: " + validar.validarEmail("Carlos@gmail.com"));
-        System.out.println("Senha: " + validar.validarSenha("Java@12345"));
+        System.out.println("Nome: " + validarNome.validarNome("Carlos"));
+        System.out.println("Email: " + validarEmail.validarEmail("Carlos@gmail.com"));
+        System.out.println("Senha: " + validarSenha.validarSenha("Java@12345"));
 
     }
 

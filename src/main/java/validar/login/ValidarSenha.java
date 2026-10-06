@@ -1,7 +1,5 @@
 package validar.login;
 
-import validar.login.exception.NotFoundException;
-
 public class ValidarSenha {
     public boolean validarSenha(String senha) {
         if (senha == null || senha.isBlank()) {
